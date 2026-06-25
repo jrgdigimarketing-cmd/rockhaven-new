@@ -1,0 +1,63 @@
+@layer base {
+  body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-foreground);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: var(--color-foreground);
+  }
+
+  p,
+  li {
+    color: var(--color-muted);
+  }
+}
+
+@layer components {
+  .display-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    @apply text-4xl sm:text-5xl lg:text-6xl;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    @apply text-3xl sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .section-eyebrow {
+    @apply text-[0.7rem] font-medium uppercase tracking-[0.24em];
+    color: var(--color-primary-strong);
+  }
+
+  .body-large {
+    @apply text-base leading-7 sm:text-lg sm:leading-8;
+  }
+
+  .text-link {
+    @apply inline-flex items-center gap-1 font-medium transition;
+    color: var(--color-foreground);
+  }
+
+  .text-link:hover {
+    color: var(--color-primary);
+  }
+}

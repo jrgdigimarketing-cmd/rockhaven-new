@@ -1,0 +1,31 @@
+@layer components {
+  .section-padding {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .stack-gap {
+    @apply space-y-8;
+  }
+
+  .surface-panel {
+    border-radius: var(--radius-panel);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-panel);
+  }
+
+  .surface-card {
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-panel);
+  }
+
+  .text-measure {
+    max-width: 65ch;
+  }
+
+  .content-measure {
+    max-width: 58ch;
+  }
+}
