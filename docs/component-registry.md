@@ -19,6 +19,13 @@
   - Supporting copy
   - Dual CTAs
 
+- `AccommodationFeaturesSection`
+  - Centered section title
+  - Room description
+  - Amenity list
+  - Price and booking action
+  - Image carousel
+
 - `AccommodationCard`
   - Image
   - Small label

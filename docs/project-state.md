@@ -22,12 +22,18 @@
 ## Accommodation Page State
 
 - The accommodation route now starts with the shared `HeroSection` using placeholder copy
-- The accommodation route now reuses a shared `AccommodationFeaturesComponent` for the three cottage feature sections
-- Each repeated section uses a centered title, a stacked feature list, and a bottom `Book` button
+- The Erica accommodation feature section now uses a dedicated carousel-backed layout with room description, amenities, visible price, and booking CTA
+- The accommodation route now repeats the shared `AccommodationFeaturesSection` for Lavender Cottage and Farm House so all three cottages use the same detail layout
+- Each accommodation detail section uses a centered title, a room description, amenity list, visible price, and a bottom `Book` button
+- The accommodation route now ends with the shared booking CTA section instead of separate process and about sections
 
 ## Booking CTA State
 
 - Booking CTA section is implemented as a centered text block with a full-width image band beneath it
+
+## Gallery Section State
+
+- The gallery section now uses local placeholder imagery, a short stay-focused introduction, and a `Learn more` button that links to the about page
 
 ## Header State
 

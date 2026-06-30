@@ -28,7 +28,7 @@
   <Container size="wide" className="py-16 sm:py-20 lg:py-24">
     <Grid columns={2} gap="lg" className="items-start lg:grid-cols-[1.15fr_0.85fr]">
       <Stack gap="lg" className="max-w-2xl">
-        <Logo companyName={company.name} />
+        <Logo companyName={company.name} showText={false} framed={false} imageClass="h-12 w-auto max-h-12" />
 
         <Stack gap="sm" className="max-w-xl">
           <p class="body-large text-[var(--color-muted)]">{company.tagline}</p>

@@ -1,45 +1,55 @@
 <script>
+  import Button from '../components/Button.svelte';
+  import Grid from '../components/Grid.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
 
   const items = [
-    '/images/gallery/fields.webp',
-    '/images/gallery/hiking.webp',
-    '/images/gallery/flowers.webp',
-    '/images/gallery/rockart.webp'
+    {
+      src: '/images/gallery/fields.webp',
+      alt: 'Open fields near the farm',
+      label: 'Open fields'
+    },
+    {
+      src: '/images/gallery/hiking.webp',
+      alt: 'Walking trail in the surrounding landscape',
+      label: 'Walking trails'
+    },
+    {
+      src: '/images/gallery/flower.webp',
+      alt: 'Local flower detail in the garden',
+      label: 'Garden moments'
+    },
+    {
+      src: '/images/gallery/rockart.webp',
+      alt: 'Rock art detail from the surrounding area',
+      label: 'Nearby discoveries'
+    }
   ];
 </script>
 
+<SectionWrapper
+  eyebrow="Gallery"
+  title="See more of what your stay can hold"
+  description="Take a closer look at the farm atmosphere, the surrounding scenery, and the easygoing activities guests can enjoy between quiet moments."
+  align="center"
+  tone="muted"
+>
+  <div class="w-full">
+    <Grid columns={2} gap="md" className="md:grid-cols-4">
+      {#each items as item}
+        <figure class="overflow-hidden rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
+          <div class="aspect-[4/3]">
+            <img src={item.src} alt={item.alt} class="h-full w-full object-cover" />
+          </div>
+          <figcaption class="px-4 py-3 text-sm font-medium text-[var(--color-foreground)]">
+            {item.label}
+          </figcaption>
+        </figure>
+      {/each}
+    </Grid>
 
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex flex-wrap">
-    <div class="flex w-full mb-20 flex-wrap">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Master Cleanse Reliac Heirloom</h1>
-      <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-    </div>
-    <div class="flex flex-wrap md:-m-2 -m-1">
-      <div class="flex flex-wrap w-1/2">
-        <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
-        </div>
-        <div class="md:p-2 p-1 w-full">
-          <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
-        </div>
-      </div>
-      <div class="flex flex-wrap w-1/2">
-        <div class="md:p-2 p-1 w-full">
-          <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
-        </div>
-      </div>
+    <div class="mt-10 flex justify-center">
+      <Button href="/about">Learn more</Button>
     </div>
   </div>
-</section>
-
+</SectionWrapper>

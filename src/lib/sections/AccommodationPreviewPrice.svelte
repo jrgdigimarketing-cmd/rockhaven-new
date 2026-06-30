@@ -1,14 +1,19 @@
 <script>
+  import Button from '../components/Button.svelte';
   import Card from '../components/Card.svelte';
 
   const accommodations = [
     {
-      title: 'Lavenda Cottage',
+      title: 'Lavender Cottage',
       description:
         'Sleeps up to 6 guests. Spacious three-bedroom self-catering cottage ideal for families and small groups.',
       image:
         'images/accommodation/lavender.webp',
-      alt: 'Comfortable self-catering cottage at Rockhaven Guest Farm'
+      alt: 'Comfortable self-catering cottage at Rockhaven Guest Farm',
+      price: 'From R1,980.00',
+      priceLabel: 'Per night',
+      bookHref: '/contact', // TODO: update if the booking destination changes.
+      moreHref: '#lavender-features' // TODO: update if this feature section anchor changes.
     },
     {
       title: 'Erica Cottage',
@@ -16,7 +21,11 @@
         'Sleeps up to 4 guests. Comfortable two-bedroom cottage suited to couples and small families.',
       image:
         'images/accommodation/erica.webp',
-      alt: 'Cozy cottage interior at Rockhaven Guest Farm'
+      alt: 'Cozy cottage interior at Rockhaven Guest Farm',
+      price: 'From R1,420.00',
+      priceLabel: 'Per night',
+      bookHref: '/contact', // TODO: update if the booking destination changes.
+      moreHref: '#erica-features' // TODO: update if this feature section anchor changes.
     },
     {
       title: 'Farmhouse',
@@ -24,13 +33,15 @@
         'Suitable for larger families, groups and occasional retreats. Spacious accommodation in a secluded mountain setting.',
       image:
         'images/accommodation/farmhouse.webp',
-      alt: 'Secluded farmhouse accommodation surrounded by mountains'
+      alt: 'Secluded farmhouse accommodation surrounded by mountains',
+      price: 'From R5,000.00',
+      priceLabel: 'Per night',
+      bookHref: '/contact', // TODO: update if the booking destination changes.
+      moreHref: '#farmhouse-features' // TODO: update if this feature section anchor changes.
     }
   ];
 
   const cardContentClass = 'flex flex-1 flex-col px-5 pb-5 pt-4 sm:px-6 sm:pb-6 sm:pt-5';
-  const cardLinkClass =
-    'mt-5 inline-flex items-center justify-center self-start rounded-md border border-[var(--color-border)] bg-transparent px-4 py-2 text-[0.78rem] font-medium tracking-[0.02em] text-[var(--color-foreground)] transition duration-200 hover:bg-[var(--color-surface-muted)]';
 </script>
 
 <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
@@ -65,12 +76,24 @@
             {accommodation.description}
           </p>
 
-          <a
-            href="/accommodation"
-            class={cardLinkClass}
-          >
-            View Details
-          </a>
+          <div class="mt-5">
+            <p class="text-[1.15rem] font-semibold leading-6 tracking-tight text-[var(--color-foreground)] sm:text-[1.25rem]">
+              {accommodation.price}
+            </p>
+            <p class="mt-0.5 text-sm leading-6 text-[var(--color-muted)]">
+              {accommodation.priceLabel}
+            </p>
+          </div>
+
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+            <Button href={accommodation.bookHref} className="w-full sm:w-auto">
+              Book
+            </Button>
+
+            <Button href={accommodation.moreHref} variant="secondary" className="w-full sm:w-auto">
+              More
+            </Button>
+          </div>
         </div>
       </Card>
     {/each}
