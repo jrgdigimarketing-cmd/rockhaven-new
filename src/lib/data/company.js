@@ -4,7 +4,7 @@ tagline: 'A quiet mountain farm escape in the Winterhoek Mountains near Cape Tow
 description:
 'Rockhaven is a family-run organic guest farm offering self-catering cottages, mountain views, hiking, and a peaceful nature retreat experience.',
 
-email: '[hello@rockhaven.co.za](mailto:hello@rockhaven.co.za)',
+email: 'hello@rockhaven.co.za',
 phone: '+27 (0)XX XXX XXXX',
 address: 'Winterhoek Mountains, Western Cape, South Africa',
 hours: 'Check-in by arrangement',

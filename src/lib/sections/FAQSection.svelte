@@ -1,16 +1,34 @@
 <script>
-  import FAQAccordion from '../components/FAQAccordion.svelte';
+  import Card from '../components/Card.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
 
   export let items = [];
+
+  const gridClass = 'grid gap-4 sm:grid-cols-2 xl:grid-cols-3';
 </script>
 
 <section id="faq">
   <SectionWrapper
     eyebrow="FAQ"
-    title="Answer the common questions before they slow down the brief"
-    description="A strong FAQ section helps reduce friction for clients and improves search relevance on service pages."
+    title="Questions"
+    description="What you need to know before you arrive at Rockhaven."
   >
-    <FAQAccordion {items} />
+    <div class={gridClass}>
+      {#each items as item}
+        <Card as="article" padding="md">
+          <h3 class="text-lg font-medium text-[var(--color-foreground)]">{item.question}</h3>
+          <p class="mt-3 text-sm leading-7 text-[var(--color-muted)]">{item.answer}</p>
+        </Card>
+      {/each}
+    </div>
+
+    <div class="mt-8">
+      <Card padding="md" tone="muted">
+        <h3 class="text-xl font-medium text-[var(--color-foreground)]">Still have questions?</h3>
+        <p class="mt-3 text-sm leading-7 text-[var(--color-muted)]">
+          Reach out and we’ll answer what you need to know.
+        </p>
+      </Card>
+    </div>
   </SectionWrapper>
 </section>

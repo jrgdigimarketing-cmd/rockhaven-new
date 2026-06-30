@@ -1,23 +1,29 @@
 export const testimonials = [
   {
-    name: 'Jordan Lee',
-    role: 'Founder, Studio North',
+    name: 'Allan F',
+    meta: 'Cape Town, South Africa · Apr 2026',
+    initials: 'AF',
+    role: 'Cape Town, South Africa · Apr 2026',
     image: '/images/testimonials/testimonial-one.svg',
     quote:
-      'This starter makes it easy to move from brief to working site without rebuilding the same structure every time.'
+      'A wonderful mountain break with everything you need, great walks, incredible scenery, and a truly pet-friendly stay.'
   },
   {
-    name: 'Amina Patel',
-    role: 'Marketing Lead, Brightline',
+    name: 'katjaabbott',
+    meta: 'Dec 2025',
+    initials: 'KA',
+    role: 'Dec 2025',
     image: '/images/testimonials/testimonial-two.svg',
     quote:
-      'The content model and section layout are exactly what we need for rapid client launches.'
+      'Quiet, peaceful, and relaxed, with a memorable hike to the beautiful mountain pools.'
   },
   {
-    name: 'Chris Morgan',
-    role: 'Operations Director, Salt & Stone',
+    name: 'Brigitte van Tonder',
+    meta: 'Aug 2025',
+    initials: 'Bv',
+    role: 'Aug 2025',
     image: '/images/testimonials/testimonial-three.svg',
     quote:
-      'It feels polished, organized, and ready for a real workflow instead of a throwaway demo.'
+      'A comfortable family weekend in a well-equipped cottage, with stunning scenery, hikes, and plenty of character.'
   }
 ];

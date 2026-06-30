@@ -8,8 +8,8 @@
 <section id="testimonials" class="bg-slate-50/80">
   <SectionWrapper
     eyebrow="Testimonials"
-    title="Social proof ready for future projects"
-    description="Swap in real client quotes later while keeping the card structure and visual rhythm intact."
+    title="Guest voices"
+    description="What visitors say about their time here."
   >
     <div class="grid gap-6 lg:grid-cols-3">
       {#each testimonials as testimonial}

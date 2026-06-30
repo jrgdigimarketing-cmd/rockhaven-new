@@ -8,7 +8,7 @@
   export let image;
 </script>
 
-<Card>
+<Card className="rounded-md">
   <div class="flex items-start gap-4">
     <img
       src={image}

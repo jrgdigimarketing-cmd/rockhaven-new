@@ -1,22 +1,32 @@
 export const faq = [
   {
-    question: 'What is this template for?',
+    question: "What's included in the cottages?",
     answer:
-      'It is a reusable SvelteKit starter for building future client websites quickly and consistently.'
+      'Each cottage comes fully equipped with a kitchen, bedrooms, bathrooms, and heating. Linens and towels are provided. You bring yourself and whatever food you want to cook.'
   },
   {
-    question: 'Does it use JavaScript or TypeScript?',
+    question: 'What should I bring?',
     answer:
-      'The application code is JavaScript, with only the minimal SvelteKit declaration file included.'
+      "Warm clothes for the mountains, good walking shoes, and a book you've been meaning to read. The weather changes fast up here, so layers matter. Everything else is already there."
   },
   {
-    question: 'Is Cloudflare Pages supported?',
+    question: 'When can I check in?',
     answer:
-      'Yes. The starter is configured with the Cloudflare adapter and a deployment workflow outline.'
+      "Check-in is at three in the afternoon. Check-out is at ten in the morning. If you need something different, contact us and we'll see what we can do."
   },
   {
-    question: 'Can I swap in a different design system later?',
+    question: 'Are there shops nearby?',
     answer:
-      'Yes. The sections, data files, and style tokens are intentionally modular so they can be replaced piecemeal.'
+      'The nearest town is about thirty minutes away. Plan your groceries before you arrive. Part of staying here is the simplicity of it, the lack of running out for things.'
+  },
+  {
+    question: 'Is there cell service?',
+    answer:
+      'Signal is spotty. Some cottages have better coverage than others. This is intentional. If you need the right spot, let us know and we will help you find the best place.'
+  },
+  {
+    question: 'Can I bring pets?',
+    answer:
+      'We work with animals here. Pets are possible but require advance notice. Contact us directly to discuss what might work for your situation.'
   }
 ];

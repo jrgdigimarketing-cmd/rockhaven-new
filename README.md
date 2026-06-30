@@ -67,6 +67,8 @@ npm run check
 npm run build
 ```
 
+This writes the Cloudflare-ready SvelteKit output to `.svelte-kit/cloudflare` and mirrors it to `build/` for Cloudflare Pages deployments and the GitHub Actions workflow in this repo.
+
 ## How to add a new section
 
 1. Create a new file in `src/lib/sections/`.
@@ -106,7 +108,9 @@ Recommended deployment flow:
 1. Push to GitHub.
 2. Connect the repository to Cloudflare Pages.
 3. Use the SvelteKit build command.
-4. Deploy the generated `build` output.
+4. Deploy the generated `build/` output.
+
+If you configure Cloudflare Pages manually, point the build output directory at `build/` so it picks up the mirrored adapter output.
 
 If you prefer GitHub Actions, use the example workflow in `.github/workflows/deploy.yml`.
 

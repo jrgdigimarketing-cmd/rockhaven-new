@@ -2,10 +2,9 @@
   import HeroSection from '$lib/sections/HeroSection.svelte';
   import AccommodationPreview from '$lib/sections/AccommodationPreview.svelte';
   import FarmExperiencePreview from '$lib/sections/FarmExperiencePreview.svelte';
-  import WhyGuestsReturnSection from '$lib/sections/WhyGuestsReturnSection.svelte';
+  import TestimonialsSection from '$lib/sections/TestimonialsSection.svelte';
   import BookingCTASection from '$lib/sections/BookingCTASection.svelte';
   import FAQSection from '$lib/sections/FAQSection.svelte';
-  import TestimonialsSection from '$lib/sections/TestimonialsSection.svelte';
   import LocationPreviewSection from '$lib/sections/LocationPreviewSection.svelte';
 
   import { company } from '$lib/data/company.js';
@@ -27,8 +26,7 @@
 <HeroSection />
 <AccommodationPreview />
 <FarmExperiencePreview {services} />
-<WhyGuestsReturnSection {company} />
+<TestimonialsSection {testimonials} />
 <BookingCTASection {company} />
 <FAQSection items={faq} />
-<TestimonialsSection {testimonials} />
 <LocationPreviewSection {company} />

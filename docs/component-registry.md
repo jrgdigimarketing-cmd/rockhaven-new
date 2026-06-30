@@ -3,9 +3,15 @@
 ## Shared Components
 
 - `SiteHeader`
-  - Logo area
+  - Logo-only brand mark in the compact header
   - Primary navigation
+  - Primary and secondary CTAs
   - Compact top-bar alignment
+
+- `Logo`
+  - Shared brand mark and wordmark
+  - Framed lockup or compact logo-only variant
+  - Used in the header and footer
 
 - `HeroSection`
   - Full-bleed image hero
@@ -19,6 +25,11 @@
   - Title
   - Summary copy
   - Action link
+
+- `AccommodationFeaturesComponent`
+  - Centered section title
+  - Reusable feature list rows
+  - Bottom-aligned booking button
 
 - `FeatureList`
   - `FeatureItem` rows
@@ -47,9 +58,12 @@
 
 - `SiteFooter`
   - Logo area
+  - Business summary
   - Secondary navigation
-  - Legal links
-  - Social icons
+  - Contact information
+  - CTA area
+  - Conditional social links
+  - Copyright notice
 
 ## Shared Micro-Components
 

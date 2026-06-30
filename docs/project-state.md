@@ -19,6 +19,28 @@
 8. Location section
 9. Footer
 
+## Accommodation Page State
+
+- The accommodation route now starts with the shared `HeroSection` using placeholder copy
+- The accommodation route now reuses a shared `AccommodationFeaturesComponent` for the three cottage feature sections
+- Each repeated section uses a centered title, a stacked feature list, and a bottom `Book` button
+
+## Booking CTA State
+
+- Booking CTA section is implemented as a centered text block with a full-width image band beneath it
+
+## Header State
+
+- Header uses the compact logo-only brand mark
+- Desktop header includes primary navigation plus primary and outline secondary CTAs
+- Header height remains fixed while the logo scales to fit within the existing bar
+
+## Footer State
+
+- Reusable footer shell is in place
+- Footer content is driven by `company` and `navigation` data
+- Footer includes logo, summary, CTA, navigation, contact details, and conditional social links
+
 ## Architecture Priorities
 
 - Component-first

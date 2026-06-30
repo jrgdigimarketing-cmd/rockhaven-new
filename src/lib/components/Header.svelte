@@ -15,13 +15,14 @@
 
 <header class="sticky top-0 z-30 border-b border-[var(--color-border)] bg-[rgba(252,250,246,0.86)] backdrop-blur-xl">
   <Container size="wide" className="flex h-20 items-center justify-between gap-4">
-    <Logo companyName={company.name} />
+    <Logo companyName={company.name} showText={false} framed={false} imageClass="h-12 w-auto max-h-12" />
 
     <div class="hidden lg:block">
-      <Navigation {navigation} />
+      <Navigation links={navigation} />
     </div>
 
-    <div class="hidden lg:block">
+    <div class="hidden items-center gap-3 lg:flex">
+      <Button variant="secondary">Book</Button>
       <Button href={primaryCta.href}>{primaryCta.label}</Button>
     </div>
 
