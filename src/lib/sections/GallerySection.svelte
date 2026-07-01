@@ -7,22 +7,26 @@
     {
       src: '/images/gallery/fields.webp',
       alt: 'Open fields near the farm',
-      label: 'Open fields'
+      label: 'Open fields',
+      className: 'lg:col-start-1 lg:row-span-2'
     },
     {
       src: '/images/gallery/hiking.webp',
       alt: 'Walking trail in the surrounding landscape',
-      label: 'Walking trails'
+      label: 'Walking trails',
+      className: 'lg:col-start-2 lg:row-start-1'
     },
     {
       src: '/images/gallery/flower.webp',
       alt: 'Local flower detail in the garden',
-      label: 'Garden moments'
+      label: 'Garden moments',
+      className: 'lg:col-start-2 lg:row-start-2'
     },
     {
       src: '/images/gallery/rockart.webp',
       alt: 'Rock art detail from the surrounding area',
-      label: 'Nearby discoveries'
+      label: 'Nearby discoveries',
+      className: 'lg:col-start-3 lg:row-span-2'
     }
   ];
 </script>
@@ -32,17 +36,22 @@
   title="See more of what your stay can hold"
   description="Take a closer look at the farm atmosphere, the surrounding scenery, and the easygoing activities guests can enjoy between quiet moments."
   align="center"
-  tone="muted"
+  tone="surface"
 >
   <div class="w-full">
-    <Grid columns={2} gap="md" className="md:grid-cols-4">
+    <Grid columns={1} gap="md" className="md:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[11rem]">
       {#each items as item}
-        <figure class="overflow-hidden rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
-          <div class="aspect-[4/3]">
-            <img src={item.src} alt={item.alt} class="h-full w-full object-cover" />
-          </div>
-          <figcaption class="px-4 py-3 text-sm font-medium text-[var(--color-foreground)]">
-            {item.label}
+        <figure class={`group relative h-full overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)] ${item.className}`}>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent opacity-80 transition duration-300 group-hover:opacity-100"></div>
+          <img
+            src={item.src}
+            alt={item.alt}
+            class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          />
+          <figcaption class="absolute inset-x-0 bottom-0 p-4">
+            <span class="inline-flex rounded-full bg-white/15 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
+              {item.label}
+            </span>
           </figcaption>
         </figure>
       {/each}

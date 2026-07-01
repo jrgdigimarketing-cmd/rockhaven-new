@@ -1,6 +1,6 @@
 <script>
   import HeroSection from '$lib/sections/HeroSection.svelte';
-  import AccommodationPreview from '$lib/sections/AccommodationPreview.svelte';
+  import AccommodationPreviewPrice from '$lib/sections/AccommodationPreviewPrice.svelte';
   import FarmExperiencePreview from '$lib/sections/FarmExperiencePreview.svelte';
   import TestimonialsSection from '$lib/sections/TestimonialsSection.svelte';
   import BookingCTASection from '$lib/sections/BookingCTASection.svelte';
@@ -23,8 +23,15 @@
   <title>{seo.title}</title>
   <meta name="description" content={seo.description} />
 </svelte:head>
-<HeroSection />
-<AccommodationPreview />
+<HeroSection
+  primaryHref="https://book.nightsbridge.com/28076"
+  primaryLabel="Book Your Stay"
+  primaryTarget="_blank"
+  primaryRel="noreferrer"
+  secondaryHref="/about"
+  secondaryLabel="Explore"
+/>
+<AccommodationPreviewPrice />
 <FarmExperiencePreview {services} />
 <TestimonialsSection {testimonials} />
 <BookingCTASection {company} />

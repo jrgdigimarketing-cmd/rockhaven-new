@@ -1,11 +1,13 @@
 <script>
 	const heroImage = '/images/hero/winterhoek_hero.webp';
 
-	export let title = 'Mountain refuge in the Winterhoek.';
+	export let title = 'Self-catering cottages in the Winterhoek Mountains';
 	export let description =
-		'Rockhaven is a working farm where the mountains meet solitude. Slow cottages sit out on the land, waiting for those who seek something real.';
-	export let primaryLabel = 'Book';
+		'Escape to a working organic farm in the Winterhoek Mountains, just two hours from Cape Town. Stay in one of three private self-catering cottages, explore scenic hiking trails, and unwind in a landscape of wide-open mountains, fresh air, and complete tranquillity.';
+	export let primaryLabel = 'Book Your Stay';
 	export let primaryHref = '/contact';
+	export let primaryTarget = '';
+	export let primaryRel = '';
 	export let secondaryLabel = 'Explore';
 	export let secondaryHref = '/accommodation';
 </script>
@@ -46,6 +48,8 @@
 				<div class="mt-6 flex flex-wrap items-center gap-3">
 					<a
 						href={primaryHref}
+						target={primaryTarget || undefined}
+						rel={primaryRel || undefined}
 						class="inline-flex min-h-11 items-center justify-center rounded-sm bg-white px-5 py-2 text-sm font-medium text-stone-900 transition hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
 					>
 						{primaryLabel}

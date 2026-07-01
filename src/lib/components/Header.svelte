@@ -22,7 +22,14 @@
     </div>
 
     <div class="hidden items-center gap-3 lg:flex">
-      <Button variant="secondary">Book</Button>
+      <Button
+        href="https://book.nightsbridge.com/28076"
+        target="_blank"
+        rel="noreferrer"
+        variant="secondary"
+      >
+        Book
+      </Button>
       <Button href={primaryCta.href}>{primaryCta.label}</Button>
     </div>
 

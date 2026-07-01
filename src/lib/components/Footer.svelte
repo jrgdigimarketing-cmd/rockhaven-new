@@ -1,6 +1,5 @@
 <script>
   // Shared site footer with logo, summary, navigation, contact details, and CTA.
-  import Button from './Button.svelte';
   import Container from './Container.svelte';
   import Grid from './Grid.svelte';
   import Logo from './Logo.svelte';
@@ -9,7 +8,6 @@
 
   export let company;
   export let navigation = [];
-  export let primaryCta = { label: 'Contact us', href: '#contact' };
 
   const socialMap = [
     ['instagram', 'Instagram'],
@@ -24,7 +22,7 @@
   $: phoneHref = company?.phone && !company.phone.includes('X') ? `tel:${company.phone.replace(/[^+\d]/g, '')}` : '';
 </script>
 
-<footer class="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
+<footer id="footer" class="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
   <Container size="wide" className="py-16 sm:py-20 lg:py-24">
     <Grid columns={2} gap="lg" className="items-start lg:grid-cols-[1.15fr_0.85fr]">
       <Stack gap="lg" className="max-w-2xl">
@@ -34,10 +32,6 @@
           <p class="body-large text-[var(--color-muted)]">{company.tagline}</p>
           <p class="text-sm leading-7 text-[var(--color-muted)]">{company.description}</p>
         </Stack>
-
-        <div class="flex flex-wrap gap-3">
-          <Button href={primaryCta.href}>{primaryCta.label}</Button>
-        </div>
       </Stack>
 
       <Grid columns={2} gap="lg" className="sm:grid-cols-2">

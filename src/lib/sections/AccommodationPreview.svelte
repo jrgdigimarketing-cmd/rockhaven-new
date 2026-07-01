@@ -41,7 +41,7 @@
     </h2>
 
     <p class="body-large mx-auto mt-4 max-w-xl text-pretty">
-      Each cottage stands separate, fully equipped for cooking and living your own way.
+      Three fully equipped self-catering options, each privately positioned across the farm.
     </p>
   </div>
 

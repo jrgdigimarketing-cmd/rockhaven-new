@@ -5,8 +5,8 @@ export const navigation = [
 ];
 
 export const primaryCta = {
-label: 'Contact',
-href: '/contact'
+  label: 'Contact',
+  href: '#footer'
 };
 
 export const secondaryCta = {

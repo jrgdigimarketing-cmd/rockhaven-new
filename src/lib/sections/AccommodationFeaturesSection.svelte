@@ -3,7 +3,6 @@
   import Card from '../components/Card.svelte';
   import Grid from '../components/Grid.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
-  import Stack from '../components/Stack.svelte';
   import { onDestroy, onMount } from 'svelte';
 
   export let id = '';
@@ -13,7 +12,9 @@
   export let maxGuests = '';
   export let price = '';
   export let priceLabel = 'Per night';
-  export let bookHref = '/contact';
+  export let bookHref = 'https://book.nightsbridge.com/28076';
+  export let bookTarget = '_blank';
+  export let bookRel = 'noreferrer';
   export let bookLabel = 'Book';
   export let slides = [];
 
@@ -68,61 +69,64 @@
 </script>
 
 <section id={id} class="bg-white">
-  <SectionWrapper title={title} align="center">
-    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
-      <div class="order-2 lg:order-1">
-        <Stack gap="lg">
-          <div>
-            <p class="section-eyebrow">Room Description</p>
-            <p class="body-large mt-3">
-              {roomDescription}
-            </p>
-          </div>
+  <SectionWrapper eyebrow="Accommodation" align="left" contentClass="space-y-12">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start lg:gap-16">
+      <div class="space-y-8">
+        <div class="max-w-2xl space-y-4">
+          <h2 class="text-3xl/tight font-normal text-gray-900 sm:text-4xl lg:text-[2.75rem]">
+            {title}
+          </h2>
 
-          <div>
-            <p class="section-eyebrow">Amenities</p>
-            <Grid as="ul" columns={2} gap="sm" className="mt-4">
-              {#each amenities as amenity}
-                <li class="flex items-start gap-3 text-sm leading-6 text-[var(--color-foreground)]">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]"></span>
-                  <span>{amenity}</span>
-                </li>
-              {/each}
-            </Grid>
-          </div>
+          <p class="body-large max-w-xl text-pretty">
+            {roomDescription}
+          </p>
+        </div>
 
-          <div class="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:gap-6">
-            {#if maxGuests}
-              <div>
-                <p class="text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-muted)]">
-                  Max Guests
-                </p>
-                <p class="mt-1 text-lg font-semibold leading-6 text-[var(--color-foreground)]">
-                  {maxGuests}
-                </p>
-              </div>
-            {/if}
-
+        <div class="grid gap-6 sm:grid-cols-[auto_auto_auto] sm:items-end">
+          {#if maxGuests}
             <div>
               <p class="text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-muted)]">
-                From
+                Max Guests
               </p>
-              <div class="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                <p class="text-[1.4rem] font-semibold leading-tight text-[var(--color-foreground)] sm:text-[1.55rem]">
-                  {price}
-                </p>
-                <p class="text-sm leading-6 text-[var(--color-muted)]">{priceLabel}</p>
-              </div>
+              <p class="mt-1 text-lg font-semibold leading-6 text-[var(--color-foreground)]">
+                {maxGuests}
+              </p>
             </div>
+          {/if}
 
-            <Button href={bookHref} className="w-full sm:w-auto">
+          <div>
+            <p class="text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-muted)]">
+              From
+            </p>
+            <div class="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <p class="text-[1.4rem] font-semibold leading-tight text-[var(--color-foreground)] sm:text-[1.55rem]">
+                {price}
+              </p>
+              <p class="text-sm leading-6 text-[var(--color-muted)]">{priceLabel}</p>
+            </div>
+          </div>
+
+          <div class="pt-1 sm:pt-0">
+            <Button href={bookHref} target={bookTarget} rel={bookRel} className="w-full sm:w-auto">
               {bookLabel}
             </Button>
           </div>
-        </Stack>
+        </div>
+
+        <div>
+          <p class="section-eyebrow">Amenities</p>
+          <Grid as="ul" columns={2} gap="sm" className="mt-4">
+            {#each amenities as amenity}
+              <li class="flex items-start gap-3 text-sm leading-6 text-[var(--color-foreground)]">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]"></span>
+                <span>{amenity}</span>
+              </li>
+            {/each}
+          </Grid>
+        </div>
       </div>
 
-      <div class="order-1 lg:order-2">
+      <div class="lg:pt-2">
         <Card padding="none" className={imagePanelClass}>
           <div class={imageFrameClass}>
             {#each carouselSlides as slide, index}
@@ -186,7 +190,7 @@
               {/each}
             </div>
           </div>
-        </Card>
+          </Card>
       </div>
     </div>
   </SectionWrapper>

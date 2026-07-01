@@ -1,4 +1,5 @@
 <script>
+  import Button from '../components/Button.svelte';
   import Card from '../components/Card.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
 
@@ -28,6 +29,10 @@
         <p class="mt-3 text-sm leading-7 text-[var(--color-muted)]">
           Reach out and we’ll answer what you need to know.
         </p>
+
+        <div class="mt-5">
+          <Button href="#footer">Contact</Button>
+        </div>
       </Card>
     </div>
   </SectionWrapper>

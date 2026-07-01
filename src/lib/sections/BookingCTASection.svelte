@@ -8,14 +8,19 @@
 <section id="booking-cta" class="bg-[var(--color-surface-muted)]/35 py-10 sm:py-12 lg:py-14">
   <Container size="wide">
     <div class="mx-auto max-w-3xl text-center">
-      <h2 class="section-title">Book your stay now</h2>
+      <h2 class="section-title">Ready to slow down?</h2>
       <p class="body-large mx-auto mt-4 max-w-2xl">
-        Reserve one of the three cottages and claim your place of mountain quiet.
+        Choose a cottage, pick your dates, and enjoy a quiet mountain escape just two hours from Cape Town.
       </p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <Button href="#contact">Book</Button>
-        <Button href="#contact" variant="secondary">Learn</Button>
+        <Button
+          href="https://book.nightsbridge.com/28076"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Check Availability
+        </Button>
       </div>
     </div>
   </Container>

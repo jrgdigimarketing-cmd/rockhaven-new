@@ -19,12 +19,24 @@
   - Supporting copy
   - Dual CTAs
 
+- `AccommodationPreviewPrice`
+  - Centered section title
+  - Accommodation card grid
+  - Featured price
+  - Short highlight list
+  - Booking and details actions
+
 - `AccommodationFeaturesSection`
   - Centered section title
   - Room description
   - Amenity list
   - Price and booking action
   - Image carousel
+
+- `AccommodationSharedFeatures`
+  - Centered section title
+  - Shared amenity icon grid
+  - Reusable list of stay-wide features and access points
 
 - `AccommodationCard`
   - Image
@@ -43,6 +55,11 @@
   - Icon, title, and description
   - Used for the feature block beside imagery
 
+- `ExperienceHighlightsSection`
+  - Two-column editorial header
+  - Four-column image-led feature grid
+  - Left-aligned CTA row with primary button and secondary text link
+
 - `TestimonialCard`
   - Quote
   - Source mark
@@ -59,9 +76,14 @@
   - Multi-column layout on larger screens
 
 - `LocationSection`
-  - Location intro
-  - Supporting place blurbs
-  - Image companion block
+  - Centered location title and supporting copy
+  - Simple bullet-point location list
+  - Map panel companion block
+
+- `LocationPreviewSection`
+  - Hidden preview title
+  - Expandable location facts
+  - Google Maps companion block
 
 - `SiteFooter`
   - Logo area

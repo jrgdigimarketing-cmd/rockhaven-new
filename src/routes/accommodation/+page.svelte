@@ -3,7 +3,7 @@
   import { buildSeo } from '$lib/utils/seo.js';
   import HeroSection from '$lib/sections/HeroSection.svelte';
   import AccommodationFeaturesSection from '$lib/sections/AccommodationFeaturesSection.svelte';
-  import AccommodationPreviewPrice from '$lib/sections/AccommodationPreviewPrice.svelte';
+  import AccommodationSharedFeatures from '$lib/sections/AccommodationSharedFeatures.svelte';
   import GallerySection from '$lib/sections/GallerySection.svelte';
   import BookingCTASection from '$lib/sections/BookingCTASection.svelte';
 
@@ -32,7 +32,7 @@
     maxGuests: '4',
     price: 'From R1,420.00',
     priceLabel: 'Per night',
-    bookHref: '/contact',
+    bookHref: 'https://book.nightsbridge.com/28076',
     bookLabel: 'Book',
     slides: [
       {
@@ -96,7 +96,7 @@
 
   const farmhouseFeatures = {
     id: 'farmhouse-features',
-    title: 'Farm House',
+    title: 'Farmhouse',
     roomDescription:
       'Large farmhouse in magnificent gardens with rock pool and extensive mountain views across lawns and olive trees. Seven bedrooms with fully equipped kitchen, two bathrooms, plus one en-suite toilet, and an outside shower.',
     amenities: [
@@ -141,16 +141,19 @@
   <meta name="description" content={seo.description} />
 </svelte:head>
 <HeroSection
-  title="Placeholder accommodation hero title."
-  description="Placeholder text for the accommodation hero section, kept intentionally simple and aligned with the homepage layout."
+  title="Three ways to stay"
+  description="Three fully equipped self-catering options, each privately positioned across the farm."
   primaryLabel="Book"
-  primaryHref="/contact"
+  primaryHref="https://book.nightsbridge.com/28076"
+  primaryTarget="_blank"
+  primaryRel="noreferrer"
   secondaryLabel="Explore"
-  secondaryHref="#accommodation"
+  secondaryHref="/about"
 />
-<AccommodationPreviewPrice />
+
 <AccommodationFeaturesSection {...ericaFeatures} />
 <AccommodationFeaturesSection {...lavenderFeatures} />
 <AccommodationFeaturesSection {...farmhouseFeatures} />
+<AccommodationSharedFeatures />
 <GallerySection />
 <BookingCTASection {company} />
