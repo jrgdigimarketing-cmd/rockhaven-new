@@ -9,6 +9,10 @@
 - `SectionWrapper`
   - Owns vertical section padding
   - Handles optional background tone or section surface
+  - Pairs with the shared `reveal` motion action
+
+- `SectionHeading`
+  - Shared eyebrow, title, and description block used by `SectionWrapper`
 
 - `Stack`
   - Primary spacing primitive for vertical text groups
@@ -23,23 +27,19 @@
   - Used for feature and location sections
   - Collapses to one column on smaller screens
 
-- `ContentBlock`
-  - Text composition primitive for eyebrow, heading, body, and actions
-  - Keeps content measure and alignment consistent
-
 ## Responsibilities
 
 - `Container` controls width and horizontal centering
 - `SectionWrapper` controls top and bottom rhythm
+- `SectionHeading` controls the shared eyebrow/title/description composition
 - `Stack` controls spacing inside a block of content
 - `Grid` controls card placement and column count
 - `SplitLayout` controls balanced two-column composition
-- `ContentBlock` controls text grouping and reading width
 
 ## Usage Rules
 
 - Use primitives before introducing component-specific layout logic
-- Keep page width decisions out of cards and content blocks
+- Keep page width decisions out of cards and section shells
 - Let components consume primitives instead of duplicating spacing rules
 - Favor responsive collapse patterns over separate mobile layouts
 
@@ -54,5 +54,4 @@
 
 - The workspace currently uses the misspelled filename `layout-primatives.md`
 - Keep this file as the active layout primitives reference until the repository is normalized
-- `SectionWrapper` now pairs with the shared `reveal` motion action for calm scroll entrances
-- Large media surfaces may also use the shared `scrollDamp` action for very subtle scroll-responsive drift
+- Large media surfaces may also use the shared `scrollDamp` action for very subtle scroll-responsive drift, but only when the motion adds meaningful value

@@ -2,7 +2,6 @@
   import Card from '../components/Card.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
   import { reveal } from '$lib/actions/reveal.js';
-  import { scrollDamp } from '$lib/actions/scroll-damp.js';
 
   export let title = 'How to get there?';
 
@@ -41,10 +40,7 @@
         </div>
 
         <Card padding="none" className="overflow-hidden">
-          <div
-            class="scroll-damp aspect-[4/3] w-full"
-            use:scrollDamp={{ intensity: 4, scale: 1.03, rootMargin: '25% 0px' }}
-          >
+          <div class="aspect-[4/3] w-full">
             <img
               src={introImage}
               alt="Rockhaven mountain landscape"

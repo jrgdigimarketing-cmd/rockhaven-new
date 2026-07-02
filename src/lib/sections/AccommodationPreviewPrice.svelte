@@ -1,9 +1,8 @@
 <script>
   import Button from '../components/Button.svelte';
   import Card from '../components/Card.svelte';
-  import Grid from '../components/Grid.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
-  import { scrollDamp } from '$lib/actions/scroll-damp.js';
+  import SectionCardGrid from '../components/SectionCardGrid.svelte';
 
   const accommodations = [
     {
@@ -71,13 +70,9 @@
   description="Each cottage stands separate, fully equipped for cooking and living your own way."
   align="center"
 >
-  <Grid columns={3} gap="md" className="w-full">
-    {#each accommodations as accommodation}
+  <SectionCardGrid items={accommodations} columns={3} gap="md" className="w-full" let:item={accommodation}>
       <Card padding="none" className="flex h-full flex-col overflow-hidden rounded-md">
-        <div
-          class="scroll-damp aspect-[4/3] w-full overflow-hidden"
-          use:scrollDamp={{ intensity: 4, scale: 1.03, rootMargin: '25% 0px' }}
-        >
+        <div class="aspect-[4/3] w-full overflow-hidden">
           <img
             alt={accommodation.alt}
             src={accommodation.image}
@@ -127,6 +122,5 @@
           </div>
         </div>
       </Card>
-    {/each}
-  </Grid>
+  </SectionCardGrid>
 </SectionWrapper>

@@ -1,20 +1,36 @@
 # Sitemap
 
-## Core template pages
+## Routes Implemented
 
 - `/`
-- `/about` if needed
-- `/services` if needed
-- `/contact` if needed
+- `/about`
+- `/accommodation`
 
-## Section anchors
+## Home Page Anchors
 
-- `#hero`
-- `#features`
-- `#services`
-- `#about`
-- `#process`
+- `#booking-cta`
 - `#testimonials`
 - `#faq`
-- `#contact`
+- `#location-preview`
+- `#footer`
 
+## About Page Anchors
+
+- `#about`
+- `#experience-highlights`
+- `#location-section`
+- `#booking-cta`
+- `#footer`
+
+## Accommodation Page Anchors
+
+- `#erica-features`
+- `#lavender-features`
+- `#farmhouse-features`
+- `#booking-cta`
+- `#footer`
+
+## Shared Jump Targets
+
+- `#hero-heading`
+- `#mobile-menu`
