@@ -36,19 +36,24 @@
     bookLabel: 'Book',
     slides: [
       {
-        image: '/images/accommodation/erica.webp',
+        image: '/images/accommodation/RH_Erica_1_Content_1.webp',
         label: 'Erica Cottage',
-        note: 'Local placeholder image'
+        note: 'Private cottage and shaded garden'
       },
       {
-        image: '/images/accommodation/lavender.webp',
+        image: '/images/accommodation/RH_Erica_2_Content_1.webp',
         label: 'Garden view',
-        note: 'Local placeholder image'
+        note: 'Patio outlook and mountain light'
       },
       {
-        image: '/images/accommodation/farmhouse.webp',
+        image: '/images/accommodation/RH_Erica_3_Content_1.webp',
         label: 'Mountain view',
-        note: 'Local placeholder image'
+        note: 'Quiet views across the farm'
+      },
+      {
+        image: '/images/accommodation/RH_Erica_arial_1_Content_1.webp',
+        label: 'Garden detail',
+        note: 'Simple interiors and calm finishes'
       }
     ]
   };
@@ -77,19 +82,34 @@
     bookLabel: 'Book',
     slides: [
       {
-        image: '/images/accommodation/lavender.webp',
+        image: '/images/accommodation/RH_Lavender_content_11.webp',
         label: 'Lavender Cottage',
-        note: 'Local placeholder image'
+        note: 'Main cottage exterior'
       },
       {
-        image: '/images/accommodation/erica.webp',
+        image: '/images/accommodation/RH_Lavender_content_12.webp',
+        label: 'Living area',
+        note: 'Warm interiors and fireplace'
+      },
+      {
+        image: '/images/accommodation/RH_Lavender_content_13.webp',
+        label: 'Bedroom',
+        note: 'Soft light and restful tones'
+      },
+      {
+        image: '/images/accommodation/RH_Lavender_content_14.webp',
+        label: 'Bathroom',
+        note: 'Practical comfort and privacy'
+      },
+      {
+        image: '/images/accommodation/RH_Lavender_content_15.webp',
+        label: 'Braai area',
+        note: 'Outdoor dining and evening cooking'
+      },
+      {
+        image: '/images/accommodation/RH_Lavender_content_16.webp',
         label: 'Garden view',
-        note: 'Local placeholder image'
-      },
-      {
-        image: '/images/accommodation/farmhouse.webp',
-        label: 'Mountain view',
-        note: 'Local placeholder image'
+        note: 'Shaded garden and relaxed setting'
       }
     ]
   };
@@ -120,17 +140,17 @@
       {
         image: '/images/accommodation/farmhouse.webp',
         label: 'Farm House',
-        note: 'Local placeholder image'
+        note: 'Spacious farmhouse exterior'
       },
       {
-        image: '/images/accommodation/erica.webp',
-        label: 'Garden view',
-        note: 'Local placeholder image'
+        image: '/images/accommodation/RH_farmhouse_arial_1_Content_1.webp',
+        label: 'Living space',
+        note: 'Comfortable common areas'
       },
       {
-        image: '/images/accommodation/lavender.webp',
-        label: 'Mountain view',
-        note: 'Local placeholder image'
+        image: '/images/accommodation/RH_farmhouse_1_Content_1.webp',
+        label: 'Braai area',
+        note: 'Outdoor gathering and cooking'
       }
     ]
   };
