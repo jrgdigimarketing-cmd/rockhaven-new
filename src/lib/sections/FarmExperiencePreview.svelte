@@ -27,17 +27,17 @@
 
 	const carouselSlides = [
 		{
-			image: '/images/gallery/hiking.webp', // CHANGED: added leading "/" for SvelteKit public folder path
+			image: '/images/farm gallery/RH_Farm_1_Content_1.webp',
 			label: 'Mountain view',
 			note: 'Open terrain and shifting light'
 		},
 		{
-			image: '/images/gallery/fields.webp', // CHANGED: added leading "/"
+			image: '/images/farm gallery/RH_hiking_1_Content_1.webp',
 			label: 'Trail edge',
 			note: 'Paths, shadow, and scrubland'
 		},
 		{
-			image: '/images/gallery/rockart.webp', // CHANGED: added leading "/"
+			image: '/images/farm gallery/RH_Animals_arial_2_Content_1.webp',
 			label: 'Farm landscape',
 			note: 'A quiet working mountain farm'
 		}
@@ -71,9 +71,9 @@ onDestroy(() => {
 		'inline-flex items-center justify-center rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-[0.78rem] font-medium tracking-[0.02em] text-[var(--color-foreground)] transition duration-200 hover:bg-[var(--color-surface-muted)]';
 	const ctaSecondaryClass =
 		'inline-flex items-center justify-center rounded-md px-4 py-2 text-[0.78rem] font-medium tracking-[0.02em] text-[var(--color-foreground)] transition duration-200 hover:bg-[var(--color-surface-muted)]';
-	const imagePanelClass = 'overflow-hidden rounded-md';
+	const imagePanelClass = 'overflow-hidden rounded-md p-3 sm:p-4';
 	const imageFrameClass =
-		'relative h-[70svh] w-full overflow-hidden rounded-md lg:h-[34rem]';
+		'relative h-[22rem] w-full overflow-hidden rounded-md sm:h-[28rem] lg:h-[34rem]';
 	const slideCardClass =
 		'max-w-[15rem] rounded-md border border-white/20 bg-black/20 px-4 py-3 text-white backdrop-blur-[2px]';
 	const mobileExperienceSummaryClass =
@@ -206,13 +206,12 @@ onDestroy(() => {
 								<img
 									src={slide.image}
 									alt={slide.label}
-									class="absolute inset-0 block object-cover"
-									style="width: 100%; height: 100%;"
+									class="absolute inset-0 block h-full w-full object-cover"
 								/>
 
 								<div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent"></div>
 
-								<div class="absolute bottom-5 left-5 z-10 sm:bottom-6 sm:left-6">
+								<div class="absolute inset-0 flex items-end p-5 sm:p-6">
 									<div class={slideCardClass}>
 										<p class="text-[0.68rem] uppercase tracking-[0.24em] text-white/75">
 											{slide.label}
