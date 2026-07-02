@@ -41,7 +41,7 @@
   <div class="w-full">
     <Grid columns={1} gap="md" className="md:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[11rem]">
       {#each items as item}
-        <figure class={`group relative h-full overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)] ${item.className}`}>
+        <figure class={`group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)] lg:h-full lg:aspect-auto ${item.className}`}>
           <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent opacity-80 transition duration-300 group-hover:opacity-100"></div>
           <img
             src={item.src}

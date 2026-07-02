@@ -7,6 +7,15 @@
   export let open = false;
   export let links = [];
   export let primaryCta = { label: 'Contact us', href: '#contact' };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    open = false;
+  };
+
+  const closeMenu = () => {
+    open = false;
+  };
 </script>
 
 {#if open}
@@ -32,13 +41,25 @@
         orientation="vertical"
         {links}
         linkClassName="w-full"
+        onNavigate={closeMenu}
       />
 
       <div class="mt-8 border-t border-slate-200 pt-6">
-        <Button href={primaryCta.href} className="w-full">
+        <Button href={primaryCta.href} className="w-full" onClick={closeMenu}>
           {primaryCta.label}
         </Button>
       </div>
     </div>
+  </div>
+
+  <div class="pointer-events-none fixed inset-x-0 bottom-4 z-50 flex justify-center px-4 pb-[env(safe-area-inset-bottom)] lg:hidden">
+    <button
+      type="button"
+      class="pointer-events-auto inline-flex h-12 w-12 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-foreground)] shadow-lg transition hover:bg-[var(--color-surface-muted)]"
+      aria-label="Back to top"
+      on:click={scrollToTop}
+    >
+      <span aria-hidden="true" class="text-lg leading-none">↑</span>
+    </button>
   </div>
 {/if}

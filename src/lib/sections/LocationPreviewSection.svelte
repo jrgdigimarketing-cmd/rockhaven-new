@@ -58,7 +58,11 @@
     'relative aspect-[4/3] min-h-[22rem] w-full overflow-hidden rounded-md sm:min-h-[28rem] lg:min-h-[34rem]';
 </script>
 
-<section id="location-preview" class="bg-white py-20 sm:py-24 lg:py-28" aria-labelledby="location-preview-title">
+<section
+  id="location-preview"
+  class="overflow-x-clip bg-white py-20 sm:py-24 lg:py-28"
+  aria-labelledby="location-preview-title"
+>
   <SectionWrapper
     as="div"
     eyebrow="Location"
@@ -67,7 +71,11 @@
     align="center"
     size="wide"
   >
-    <SplitLayout className="items-start" contentClass="space-y-4" mediaClass="lg:pt-2">
+    <SplitLayout
+      className="items-start min-w-0"
+      contentClass="space-y-4 min-w-0"
+      mediaClass="lg:pt-2 min-w-0"
+    >
       <div slot="content" class="space-y-4">
         <h2 id="location-preview-title" class="sr-only">{title}</h2>
 
@@ -126,7 +134,7 @@
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.604157674398!2d19.063821699999995!3d-32.9254919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c32cfbf8c5d2f35%3A0x633f535f423aa97f!2sRockhaven!5e1!3m2!1sen!2sza!4v1782712386327!5m2!1sen!2sza"
               title="Map showing the accommodation location"
-              class="absolute inset-0 h-full w-full"
+              class="absolute inset-0 block h-full w-full"
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
             ></iframe>

@@ -5,8 +5,6 @@
 <script>
   import Card from '../components/Card.svelte';
 
-  export let company = {};
-
   const reviews = [
     {
       name: 'Allan F',

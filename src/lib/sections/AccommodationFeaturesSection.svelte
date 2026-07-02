@@ -1,7 +1,6 @@
 <script>
   import Button from '../components/Button.svelte';
   import Card from '../components/Card.svelte';
-  import Grid from '../components/Grid.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
   import { onDestroy, onMount } from 'svelte';
 
@@ -38,7 +37,7 @@
 
   const imagePanelClass = 'overflow-hidden rounded-md p-3 sm:p-4';
   const imageFrameClass =
-    'relative aspect-[4/3] min-h-[22rem] w-full overflow-hidden rounded-md sm:min-h-[28rem] lg:min-h-[34rem]';
+    'relative h-[22rem] w-full overflow-hidden rounded-md sm:h-[28rem] lg:h-[34rem]';
   const slideCardClass =
     'max-w-[15rem] rounded-md border border-white/20 bg-black/20 px-4 py-3 text-white backdrop-blur-[2px]';
 
@@ -115,14 +114,14 @@
 
         <div>
           <p class="section-eyebrow">Amenities</p>
-          <Grid as="ul" columns={2} gap="sm" className="mt-4">
+          <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 sm:gap-x-8">
             {#each amenities as amenity}
               <li class="flex items-start gap-3 text-sm leading-6 text-[var(--color-foreground)]">
                 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]"></span>
                 <span>{amenity}</span>
               </li>
             {/each}
-          </Grid>
+          </ul>
         </div>
       </div>
 
@@ -141,7 +140,7 @@
                 <img
                   src={slide.image}
                   alt={slide.label}
-                  class="absolute inset-0 h-full w-full object-cover"
+                  class="absolute inset-0 block h-full w-full object-cover"
                 />
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent"></div>

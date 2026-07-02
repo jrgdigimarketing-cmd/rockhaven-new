@@ -5,7 +5,10 @@
   const imageSrc = '/images/hero/hero 2.webp';
 </script>
 
-<section id="booking-cta" class="bg-[var(--color-surface-muted)]/35 py-10 sm:py-12 lg:py-14">
+<section
+  id="booking-cta"
+  class="overflow-x-clip bg-[var(--color-surface-muted)]/35 py-10 sm:py-12 lg:py-14"
+>
   <Container size="wide">
     <div class="mx-auto max-w-3xl text-center">
       <h2 class="section-title">Ready to slow down?</h2>
@@ -25,7 +28,11 @@
     </div>
   </Container>
 
-  <div class="mt-10 w-screen relative left-1/2 -translate-x-1/2">
-    <img src={imageSrc} alt="Placeholder mountain landscape" class="h-[18rem] w-full object-cover sm:h-[22rem] lg:h-[28rem]" />
+  <div class="mt-10 -mx-4 overflow-hidden sm:-mx-6 lg:-mx-8">
+    <img
+      src={imageSrc}
+      alt="Placeholder mountain landscape"
+      class="block h-[18rem] w-full object-cover sm:h-[22rem] lg:h-[28rem]"
+    />
   </div>
 </section>

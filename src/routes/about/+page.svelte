@@ -20,6 +20,8 @@
 </svelte:head>
 
 <HeroSection
+  image="/images/hero/RH_lavendar_1_Hero_1.webp"
+  mobileImage="/images/mobile/RH_lavendar_1_Mobile_1.webp"
   title="A family-run mountain farm"
   description="Rockhaven is a small, rustic guest farm in the Winterhoek Mountains, about two hours from Cape Town. It is a working organic farm with hiking, birdwatching, wide-open scenery, and a quiet rural rhythm."
   primaryLabel="View Accommodation"

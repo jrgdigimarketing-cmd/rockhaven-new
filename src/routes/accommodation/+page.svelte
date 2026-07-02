@@ -141,6 +141,8 @@
   <meta name="description" content={seo.description} />
 </svelte:head>
 <HeroSection
+  image="/images/hero/RH_Protea_arial_1_Hero_1.webp"
+  mobileImage="/images/mobile/RH_Protea_arial_1_Mobile_1.webp"
   title="Three ways to stay"
   description="Three fully equipped self-catering options, each privately positioned across the farm."
   primaryLabel="Book"
