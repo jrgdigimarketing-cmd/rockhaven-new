@@ -25,6 +25,7 @@
 </svelte:head>
 <HeroSection
   mobileImage="/images/mobile/RH_Landscape_arial_2_Mobile_1.webp"
+  videoMp4="/videos/hero-backgrounds/rockhaven_farm_hero_video.mp4"
   primaryHref="https://book.nightsbridge.com/28076"
   primaryLabel="Book Your Stay"
   primaryTarget="_blank"

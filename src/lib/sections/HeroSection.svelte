@@ -4,9 +4,11 @@
 
 	const defaultHeroImage = '/images/hero/RH_Landscape_arial_2_Hero_1.webp';
 
-	export let image = defaultHeroImage;
-	export let mobileImage = '';
-	export let title = 'Self-catering cottages in the Winterhoek Mountains';
+export let image = defaultHeroImage;
+export let mobileImage = '';
+export let videoMp4 = '';
+export let videoWebm = '';
+export let title = 'Self-catering cottages in the Winterhoek Mountains';
 	export let description =
 		'Escape to a working organic farm in the Winterhoek Mountains, just two hours from Cape Town. Stay in one of three private self-catering cottages, explore scenic hiking trails, and unwind in a landscape of wide-open mountains, fresh air, and complete tranquillity.';
 	export let primaryLabel = 'Book Your Stay';
@@ -54,7 +56,8 @@
 	<HeroMedia
 		poster={image}
 		mobilePoster={mobileImage}
-		videoMp4="/videos/hero-backgrounds/rockhaven_farm_hero_video.mp4"
+		{videoMp4}
+		{videoWebm}
 	/>
 
 	<div
