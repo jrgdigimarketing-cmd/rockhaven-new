@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { scrollDamp } from '$lib/actions/scroll-damp.js';
+  import HeroMedia from '$lib/components/HeroMedia.svelte';
 
 	const defaultHeroImage = '/images/hero/RH_Landscape_arial_2_Hero_1.webp';
 
@@ -51,19 +51,11 @@
   aria-labelledby="hero-heading"
   class="relative isolate min-h-[84svh] overflow-hidden sm:min-h-[80vh]"
 >
-	<div class="scroll-damp absolute inset-0 overflow-hidden" use:scrollDamp={{ intensity: 12, scale: 1.08 }}>
-		<picture>
-			{#if mobileImage}
-				<source media="(max-width: 639px)" srcset={mobileImage} />
-			{/if}
-
-			<img
-				src={image}
-				alt="Mountain landscape of the Winterhoek Mountains near Rockhaven Farm"
-				class="absolute inset-0 !h-full w-full object-cover"
-			/>
-		</picture>
-	</div>
+	<HeroMedia
+		poster={image}
+		mobilePoster={mobileImage}
+		videoMp4="/videos/hero-backgrounds/rockhaven_farm_hero_video.mp4"
+	/>
 
 	<div
 		class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10"

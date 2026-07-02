@@ -32,7 +32,7 @@
     <img
       src={imageSrc}
       alt="Placeholder mountain landscape"
-      class="block h-[18rem] w-full object-cover sm:h-[22rem] lg:h-[28rem]"
+      class="block aspect-video w-full object-cover"
     />
   </div>
 </section>
