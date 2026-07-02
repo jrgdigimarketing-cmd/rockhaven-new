@@ -21,7 +21,7 @@
 
 <svelte:element
   this={as}
-  class={`${tones[tone] ?? tones.default} ${paddings[padding] ?? paddings.md} ${className}`}
+  class={`${tones[tone] ?? tones.default} ${paddings[padding] ?? paddings.md} transition-[transform,box-shadow,background-color,border-color,opacity] duration-300 ease-out motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-0.5 hover:shadow-[0_26px_72px_rgba(53,41,28,0.12)] ${className}`}
 >
   <slot />
 </svelte:element>

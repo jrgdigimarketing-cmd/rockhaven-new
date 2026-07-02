@@ -1,6 +1,8 @@
 <script>
   import Card from '../components/Card.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
+  import { reveal } from '$lib/actions/reveal.js';
+  import { scrollDamp } from '$lib/actions/scroll-damp.js';
 
   export let title = 'How to get there?';
 
@@ -16,7 +18,7 @@
   const mapFrameClass = 'relative aspect-[4/3] min-h-[22rem] w-full overflow-hidden sm:min-h-[28rem] lg:min-h-[34rem]';
 </script>
 
-<section id="location-section" class="bg-white py-20 sm:py-24 lg:py-28">
+<section id="location-section" class="bg-white py-20 sm:py-24 lg:py-28" use:reveal>
   <SectionWrapper as="div" eyebrow="Location" size="wide">
     <div class="space-y-10 lg:space-y-14">
       <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-12">
@@ -39,7 +41,10 @@
         </div>
 
         <Card padding="none" className="overflow-hidden">
-          <div class="aspect-[4/3] w-full">
+          <div
+            class="scroll-damp aspect-[4/3] w-full"
+            use:scrollDamp={{ intensity: 4, scale: 1.03, rootMargin: '25% 0px' }}
+          >
             <img
               src={introImage}
               alt="Rockhaven mountain landscape"

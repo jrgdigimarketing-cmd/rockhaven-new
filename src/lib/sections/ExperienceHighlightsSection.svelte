@@ -4,6 +4,7 @@
   import Grid from '../components/Grid.svelte';
   import Button from '../components/Button.svelte';
   import TextLink from '../components/TextLink.svelte';
+  import { scrollDamp } from '$lib/actions/scroll-damp.js';
 
   const imageSources = [
     '/images/gallery/hiking.webp',
@@ -60,12 +61,15 @@
       </SplitLayout>
 
       <Grid columns={4} gap="lg">
-        {#each highlights as highlight}
-          <article class="flex h-full flex-col">
-            <div class="overflow-hidden rounded-md bg-[var(--color-surface-muted)]/35 p-5 sm:p-6">
-              <img
-                src={highlight.image}
-                alt={highlight.title}
+      {#each highlights as highlight}
+        <article class="flex h-full flex-col">
+          <div
+            class="scroll-damp overflow-hidden rounded-md bg-[var(--color-surface-muted)]/35 p-5 sm:p-6"
+            use:scrollDamp={{ intensity: 4, scale: 1.03, rootMargin: '25% 0px' }}
+          >
+            <img
+              src={highlight.image}
+              alt={highlight.title}
                 class="aspect-[4/3] w-full object-cover"
               />
             </div>

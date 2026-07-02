@@ -4,6 +4,7 @@
   import Container from './Container.svelte';
   import Grid from './Grid.svelte';
   import Stack from './Stack.svelte';
+  import { scrollDamp } from '$lib/actions/scroll-damp.js';
   import { onDestroy, onMount } from 'svelte';
 
   export let id = '';
@@ -152,11 +153,13 @@
                   }`}
                   aria-hidden={index !== activeSlide}
                 >
-                  <img
-                    src={slide.image}
-                    alt={slide.label}
-                    class="absolute inset-0 block h-full w-full object-cover"
-                  />
+                  <div class="scroll-damp absolute inset-0" use:scrollDamp={{ intensity: 4, scale: 1.03, rootMargin: '30% 0px' }}>
+                    <img
+                      src={slide.image}
+                      alt={slide.label}
+                      class="absolute inset-0 block h-full w-full object-cover"
+                    />
+                  </div>
 
                   <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent"></div>
 
@@ -299,11 +302,13 @@
                   }`}
                   aria-hidden={index !== activeSlide}
                 >
-                  <img
-                    src={slide.image}
-                    alt={slide.label}
-                    class="absolute inset-0 block h-full w-full object-cover"
-                  />
+                  <div class="scroll-damp absolute inset-0" use:scrollDamp={{ intensity: 4, scale: 1.03, rootMargin: '30% 0px' }}>
+                    <img
+                      src={slide.image}
+                      alt={slide.label}
+                      class="absolute inset-0 block h-full w-full object-cover"
+                    />
+                  </div>
 
                   <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent"></div>
 

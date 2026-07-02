@@ -1,4 +1,5 @@
 <script>
+  import { scrollDamp } from '$lib/actions/scroll-damp.js';
   import SectionWrapper from '../components/SectionWrapper.svelte';
   import SplitLayout from '../components/SplitLayout.svelte';
   import Grid from '../components/Grid.svelte';
@@ -81,11 +82,16 @@
                   }`}
                   aria-hidden={index !== activeSlide}
                 >
-                  <img
-                    src={slide.image}
-                    alt={slide.alt}
-                    class="absolute inset-0 h-full w-full object-cover object-center"
-                  />
+                  <div
+                    class="scroll-damp absolute inset-0"
+                    use:scrollDamp={{ intensity: 5, scale: 1.04, rootMargin: '30% 0px' }}
+                  >
+                    <img
+                      src={slide.image}
+                      alt={slide.alt}
+                      class="absolute inset-0 h-full w-full object-cover object-center"
+                    />
+                  </div>
                 </div>
               {/each}
 

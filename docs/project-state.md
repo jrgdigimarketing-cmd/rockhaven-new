@@ -6,6 +6,8 @@
 - Warm neutral palette with olive accents
 - Spacious, image-first homepage composition
 - Calm rural retreat tone with premium restraint
+- Gentle motion layer across shared controls, image cards, and section entrances
+- Shared `scrollDamp` utility adds a minimal scroll-responsive drift to hero and image-heavy media
 
 ## Current Page Structure
 
@@ -69,6 +71,8 @@
 - Reuse before creation
 - Tailwind utilities first
 - Custom CSS only when necessary
+- Shared motion should stay subtle, slow, and reduced-motion aware
+- Scroll effects should never alter scroll position; only soften media movement and entrances
 
 ## Implementation Order
 

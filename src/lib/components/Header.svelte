@@ -35,7 +35,7 @@
 
     <button
       type="button"
-      class="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-medium text-[var(--color-foreground)] shadow-sm lg:hidden"
+      class="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-medium text-[var(--color-foreground)] shadow-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--color-surface-muted)] motion-reduce:transform-none motion-reduce:transition-none lg:hidden"
       aria-expanded={mobileMenuOpen}
       aria-controls="mobile-menu"
       on:click={() => (mobileMenuOpen = true)}

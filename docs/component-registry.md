@@ -105,6 +105,15 @@
 - `QuoteMark`
 - `AvatarBadge`
 
+## Shared Motion Utilities
+
+- `reveal`
+  - Subtle scroll-triggered fade and slight rise for section entrances
+  - Used by `SectionWrapper` and selected full-bleed section shells
+- `scrollDamp`
+  - Soft scroll-responsive drift for large media surfaces
+  - Used on hero media and selected image-heavy sections to keep motion calm and lightweight
+
 ## Variants
 
 - Prefer variants over duplicate components when the structure stays the same

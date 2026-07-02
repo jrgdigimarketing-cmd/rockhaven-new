@@ -1,6 +1,8 @@
 <script>
 	import Card from '../components/Card.svelte';
 	import Container from '../components/Container.svelte';
+	import { reveal } from '$lib/actions/reveal.js';
+	import { scrollDamp } from '$lib/actions/scroll-damp.js';
 	import { onMount, onDestroy } from 'svelte';
  
 
@@ -25,21 +27,38 @@
 		}
 	];
 
+	const farmGalleryImage = (file) => `/images/farm_gallery/${file}`;
+
 	const carouselSlides = [
 		{
-			image: '/images/farm gallery/RH_Farm_1_Content_1.webp',
-			label: 'Mountain view',
+			image: farmGalleryImage('RH_Farm_1_Content_1.webp'),
+			label: 'Farm fields',
 			note: 'Open terrain and shifting light'
 		},
 		{
-			image: '/images/farm gallery/RH_hiking_1_Content_1.webp',
-			label: 'Trail edge',
+			image: farmGalleryImage('RH_hiking_1_Content_1.webp'),
+			label: 'Hiking trail',
 			note: 'Paths, shadow, and scrubland'
 		},
 		{
-			image: '/images/farm gallery/RH_Animals_arial_2_Content_1.webp',
-			label: 'Farm landscape',
+			image: farmGalleryImage('RH_Animals_arial_2_Content_1.webp'),
+			label: 'Animals',
 			note: 'A quiet working mountain farm'
+		},
+		{
+			image: farmGalleryImage('RH_rockart_1_Content_1.webp'),
+			label: 'Rock art',
+			note: 'History set into the landscape'
+		},
+		{
+			image: farmGalleryImage('RH_Protea_1_Content_1.webp'),
+			label: 'Proteas',
+			note: 'Natural detail and color'
+		},
+		{
+			image: farmGalleryImage('RH_Farm_4_Content_1.webp'),
+			label: 'Open farm',
+			note: 'Wide sky, pasture, and stillness'
 		}
 	];
 
@@ -80,7 +99,7 @@ onDestroy(() => {
 		'grid cursor-pointer list-none grid-cols-[auto_1fr_auto] items-center gap-3 p-4 text-left';
 </script>
 
-<section class="bg-white py-20 sm:py-24 lg:py-28">
+<section class="bg-white py-20 sm:py-24 lg:py-28" use:reveal>
 	<Container>
 		<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
 			<div class="order-2 lg:order-1 lg:h-[34rem]">
@@ -203,11 +222,13 @@ onDestroy(() => {
 								}`}
 								aria-hidden={index !== activeSlide}
 							>
-								<img
-									src={slide.image}
-									alt={slide.label}
-									class="absolute inset-0 block h-full w-full object-cover"
-								/>
+								<div class="scroll-damp absolute inset-0" use:scrollDamp={{ intensity: 4, scale: 1.03, rootMargin: '30% 0px' }}>
+									<img
+										src={slide.image}
+										alt={slide.label}
+										class="absolute inset-0 block h-full w-full object-cover"
+									/>
+								</div>
 
 								<div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent"></div>
 

@@ -1,4 +1,24 @@
 @layer utilities {
+  .scroll-damp {
+    transform: translate3d(0, var(--scroll-damp-y, 0px), 0) scale(var(--scroll-damp-scale, 1));
+    transform-origin: center center;
+    will-change: transform;
+  }
+
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-on-scroll--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   @keyframes fade-up {
     from {
       opacity: 0;
@@ -26,5 +46,20 @@
 
   .animate-float-soft {
     animation: float-soft 10s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-damp {
+    transform: none;
+    will-change: auto;
+  }
+
+  .reveal-on-scroll,
+  .reveal-on-scroll--visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
   }
 }

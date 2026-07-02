@@ -2,6 +2,7 @@
   // Shared section shell that keeps headings, spacing, and alignment consistent.
   import Container from './Container.svelte';
   import SectionHeading from './SectionHeading.svelte';
+  import { reveal } from '$lib/actions/reveal.js';
 
   export let as = 'section';
   export let eyebrow = '';
@@ -24,7 +25,7 @@
 
 <svelte:element this={as} class={`${tones[tone] ?? tones.default} ${className}`}>
   <Container size={size} className="section-padding">
-    <div class={`flex flex-col gap-8 ${alignClasses} ${contentClass}`}>
+    <div class={`flex flex-col gap-8 ${alignClasses} ${contentClass}`} use:reveal>
     {#if eyebrow}
         <SectionHeading
           {eyebrow}

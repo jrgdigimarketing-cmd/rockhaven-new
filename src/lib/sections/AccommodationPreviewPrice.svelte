@@ -3,6 +3,7 @@
   import Card from '../components/Card.svelte';
   import Grid from '../components/Grid.svelte';
   import SectionWrapper from '../components/SectionWrapper.svelte';
+  import { scrollDamp } from '$lib/actions/scroll-damp.js';
 
   const accommodations = [
     {
@@ -73,7 +74,10 @@
   <Grid columns={3} gap="md" className="w-full">
     {#each accommodations as accommodation}
       <Card padding="none" className="flex h-full flex-col overflow-hidden rounded-md">
-        <div class="aspect-[4/3] w-full overflow-hidden">
+        <div
+          class="scroll-damp aspect-[4/3] w-full overflow-hidden"
+          use:scrollDamp={{ intensity: 4, scale: 1.03, rootMargin: '25% 0px' }}
+        >
           <img
             alt={accommodation.alt}
             src={accommodation.image}

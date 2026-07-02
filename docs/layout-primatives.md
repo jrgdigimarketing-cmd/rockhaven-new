@@ -54,3 +54,5 @@
 
 - The workspace currently uses the misspelled filename `layout-primatives.md`
 - Keep this file as the active layout primitives reference until the repository is normalized
+- `SectionWrapper` now pairs with the shared `reveal` motion action for calm scroll entrances
+- Large media surfaces may also use the shared `scrollDamp` action for very subtle scroll-responsive drift
